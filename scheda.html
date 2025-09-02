@@ -17,37 +17,37 @@
     .card {
       background: #ffffff;
       border-radius: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* ombra leggera */
-      padding: 60px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* ombra leggera */
+      padding: 80px 50px;
       text-align: center;
       width: 90%;
-      max-width: 550px;
+      max-width: 650px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 25px; /* spazi equilibrati */
+      gap: 30px; /* spazi equilibrati */
     }
 
     header img { 
-      width: 200px;   /* logo proporzionato */
+      width: 300px;   /* logo proporzionato */
       height: auto;
       display: block;
     }
 
     h2 { 
       font-size: 40px; 
-      margin: 5;
+      margin: 2;
       color: #1e293b;
     }
 
     .id {
-      font-size: 30px;
+      font-size: 45px;
       color: #64748b;
-      margin: 3;
+      margin: 5;
     }
 
     .banda {
-      font-size: 28px;  
+      font-size: 35px;  
       font-weight: bold;
       color: white;
       padding: 18px 40px;
@@ -89,7 +89,7 @@ const socio = soci.find(s => s.id === id);
 
 if (socio) {
   const bandaClass = socio.attivo ? "attivo" : "non-attivo";
-  const statoTxt = socio.attivo ? "SEI ATTIVO" : "NON SEI ATTIVO";
+  const statoTxt = socio.attivo ? "SOCIO ATTIVO" : "SOCIO NON ATTIVO";
   document.getElementById("scheda").innerHTML = `
     <h2>${socio.nome} ${socio.cognome}</h2>
     <div class="id">ID: ${socio.id}</div>
