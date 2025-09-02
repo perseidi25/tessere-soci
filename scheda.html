@@ -7,7 +7,7 @@
     body { 
       font-family: Arial, sans-serif; 
       margin: 0; 
-      background: linear-gradient(to bottom, #f8fafc, #e6ecf5);
+      background: linear-gradient(to bottom, #eaf4ff, #d6e8f9); /* blu freddo chiaro */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,47 +15,45 @@
     }
 
     .card {
-      background: #fff;
+      background: #ffffff;
       border-radius: 25px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ombra leggera */
+      padding: 40px 20px;
       text-align: center;
-      width: 95%;
-      height: 90vh; 
+      width: 90%;
+      max-width: 450px;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* porta tutto al centro */
       align-items: center;
-      gap: 20px; /* spazio uniforme tra elementi */
+      gap: 25px; /* spazi equilibrati */
     }
 
     header img { 
-      width: 180px;   /* logo grande ma non schiacciato */
+      width: 180px;   /* logo proporzionato */
       height: auto;
       display: block;
     }
 
     h2 { 
-      font-size: 38px; 
+      font-size: 34px; 
       margin: 0;
       color: #1e293b;
     }
 
     .id {
-      font-size: 26px;
+      font-size: 22px;
       color: #64748b;
       margin: 0;
     }
 
     .banda {
-      font-size: 32px;  
+      font-size: 28px;  
       font-weight: bold;
       color: white;
-      padding: 20px;
+      padding: 18px 40px;
       border-radius: 20px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: inline-block;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
     .attivo { background-color: #22c55e; }
     .non-attivo { background-color: #ef4444; }
@@ -98,7 +96,7 @@ if (socio) {
     <div class="banda ${bandaClass}">${statoTxt}</div>
   `;
 } else {
-  document.getElementById("scheda").innerHTML = "<p style='font-size:30px;'>Socio non trovato</p>";
+  document.getElementById("scheda").innerHTML = "<p style='font-size:24px;'>Socio non trovato</p>";
 }
 </script>
 
